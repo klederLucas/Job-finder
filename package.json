@@ -1,0 +1,20 @@
+{
+  "name": "jobfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start_server": "cd server && npm start",
+    "start_client": "cd client && npm start",
+    "install_server": "cd server && npm i",
+    "install_client": "cd client && npm i",
+    "install_dependencies": "npm i && npm run install_server && npm run install_client",
+    "start": "concurrently --kill-others-on-fail \"npm run start_server\" \"npm run start_client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
