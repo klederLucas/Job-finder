@@ -1,7 +1,7 @@
 import 'express-async-errors';
 import express from 'express';
 import dotenv from 'dotenv';
-//db and authenticate user
+import morgan from 'morgan';
 import connectDB from "./db/connect.js";
 /* Middlewares */
 import notFoundMiddleware from "./middleware/not-found.js";
@@ -14,11 +14,14 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 dotenv.config({debug: true});
+if (process.env.NODE_ENV !== 'production'){
+	app.use(morgan('dev'));
+}
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-	res.send('Welcome')
+app.get('/api/v1', (req, res) => {
+	res.json({msg: 'Welcome'})
 });
 
 app.use('/api/v1/auth', authRouter);

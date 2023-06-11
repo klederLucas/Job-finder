@@ -2,7 +2,7 @@
 
 ## Disclaimer
 
-I created this project to study about MERN stack. The technologies used in this project are:
+I've created this project to study about MERN stack. The technologies used in this project are:
 - MongoDB
 - Express
 - React
