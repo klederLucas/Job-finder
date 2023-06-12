@@ -1,4 +1,4 @@
-# Job-finder
+# Job-finder (WIP)
 
 ## Disclaimer
 
@@ -26,3 +26,7 @@ To execute this project you can run the following command to start server and cl
 
 Or if you want to execute only the server or the client, you can navigate to inside the respective folder and execute the same command.
 
+## NEXT STEPS
+- Deploy this application using GCP
+- Implement the unit tests
+- Develop more elaborated features
